@@ -6,6 +6,7 @@ import { fastifySwagger } from '@fastify/swagger'
 import ScalarApiReference from '@scalar/fastify-api-reference'
 import { fastify } from 'fastify'
 import { jsonSchemaTransform, serializerCompiler, validatorCompiler, type ZodTypeProvider } from 'fastify-type-provider-zod'
+import { errorHandler } from './_errors'
 import { env } from './env'
 
 export const app = fastify().withTypeProvider<ZodTypeProvider>()
@@ -13,7 +14,7 @@ export const app = fastify().withTypeProvider<ZodTypeProvider>()
 app.setSerializerCompiler(serializerCompiler)
 app.setValidatorCompiler(validatorCompiler)
 
-// app.setErrorHandler(errorHandler)
+app.setErrorHandler(errorHandler)
 
 app.register(fastifySwagger, {
   openapi: {
