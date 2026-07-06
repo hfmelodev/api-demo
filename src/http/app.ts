@@ -16,6 +16,12 @@ app.setValidatorCompiler(validatorCompiler)
 
 app.setErrorHandler(errorHandler)
 
+app.setNotFoundHandler((request, reply) => {
+  return reply.status(404).send({
+    message: `Rota ${request.method}:${request.url} não encontrada.`,
+  })
+})
+
 app.register(fastifySwagger, {
   openapi: {
     info: {
