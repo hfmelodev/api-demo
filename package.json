@@ -1,0 +1,36 @@
+{
+  "name": "api-demo",
+  "version": "1.0.0",
+  "description": "API boilerplate para NodeJS usando Fastify",
+  "type": "module",
+  "main": "src/http/server.ts",
+  "scripts": {
+    "dev": "tsx watch src/http/server.ts"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Hilquias Ferreira Melo",
+    "email": "hfmelodev@gmail.com",
+    "url": "https://github.com/hfmelodev"
+  },
+  "license": "ISC",
+  "packageManager": "pnpm@11.9.0",
+  "devDependencies": {
+    "@biomejs/biome": "2.5.2",
+    "@types/node": "^26.1.0",
+    "tsx": "^4.23.0",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "@fastify/cors": "^11.2.0",
+    "@fastify/jwt": "^10.1.0",
+    "@fastify/multipart": "^10.0.0",
+    "@fastify/swagger": "^9.7.0",
+    "@scalar/fastify-api-reference": "^1.62.2",
+    "dotenv": "^17.4.2",
+    "fastify": "^5.9.0",
+    "fastify-type-provider-zod": "^7.0.0",
+    "zod": "^4.4.3"
+  }
+}
